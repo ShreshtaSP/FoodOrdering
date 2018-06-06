@@ -19,13 +19,16 @@ import static org.junit.Assert.*;
  */
 public class testFoodOrdering {
     CustomerDetails cd;
+    ItemProcessing I[];
     public testFoodOrdering() {
         CustomerDetails cd;
+        ItemProcessing I[];
     }
     
     @BeforeClass
     public static void setUpClass() {
        CustomerDetails cd=new CustomerDetails();
+       ItemProcessing I[] =new ItemProcessing[10];
     }
     
     @AfterClass
@@ -57,5 +60,21 @@ public class testFoodOrdering {
  catch (CustomerDetails.invalidStringLengthException ex) {
             Logger.getLogger(testFoodOrdering.class.getName()).log(Level.SEVERE, null, ex);
         }
-     }  
+     } 
+     
+     public void testPrintCode(){
+         assertEquals(0,I[0].printCode(0));
+     }
+     
+     public void testPrintItemName(){
+         assertEquals("Lemon Coriander",I[0].printItemName(0));
+     }
+     
+     public void testPrintUnitPrice(){
+         assertEquals(70,I[0].printUnitPrice(0));
+     }
+     
+     public void testPrintSubTotal(){
+         assertEquals(140,(I[0].printSubTotal(0,I[0].getQuantity(0,2),I[0].printUnitPrice(0))));
+     }
 }
