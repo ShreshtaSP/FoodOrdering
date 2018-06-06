@@ -64,7 +64,6 @@ class ItemProcessing{
         else if(i==9)
             itemName="Schezwan Rice";
 
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         
         
         return itemName;
@@ -93,8 +92,7 @@ class ItemProcessing{
             unitPrice=120;
         else if(i==9)
             unitPrice=200;
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        
+         
         
         return unitPrice;   
     }
